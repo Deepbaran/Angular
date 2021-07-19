@@ -1,0 +1,101 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Theory:
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+==========
+Angular:
+==========
+Angular is a frameowrk that is used to build web applications, more specifically web SPA Single Page Application). Angular is referred as "ng".
+
+==========
+SPA:
+==========
+A SPA or single-page application is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the web server, instead of the default method of a web browser loading entire new pages.
+
+==========
+NG Command line utility: [https://angular.io/cli#command-overview]
+==========
+1. version -> Shows the version of the Angular
+2. new -> Creates an Angular Workspace
+3. generate -> Generates Classes, components, modules, pipes, etc.
+4. add -> Adds support for an external library to your project.
+5. serve -> Builds and runs our application for the development purpose.
+6. build -> Builds our application for production
+7. deploy -> Deploys our application on a production server
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+COMMANDS:
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1. Download CLI from npm (Node Package Manager):
+> npm install -g @angular/cli@latest [@latest is optional]
+
+2. Create a Angular Project using CLI:
+> ng new app-name <OR> ng new app-name --no-strict [strict mode is the mode where we can make our project by optimizing it][ng stands for angular]
+
+3. Deploy the app in the development server:
+> ng serve --open <OR> ng serve --o [It is hosted at localhost:4200][--open will automatically open the Angular app]
+
+4. Angular version:
+> ng version <OR> ng v
+
+5. Open Angular Configuration:
+> ng config
+
+6. Create a node_modules folder:
+> npm install
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+File Structure: [https://angular.io/guide/file-structure]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+==========
+tsconfig.spec.json, tsconfig.json, tsconfig.app.json, tslint.json:
+==========
+All four of these are TypeScript configuration files.
+DON'T TOUCH.
+
+==========
+package.json
+==========
+Open and look into this file first before doing anything when opening a new project. It contains most crucial information about the project. For example: name of the project, the version of it, the scripts that it supports, all the dependencies, development dependencies and typescipt linting.
+
+==========
+package-lock.json
+==========
+DON'T TOUCH until and unless putting the project in the docker and the production world.
+
+==========
+angular.json
+==========
+Configuration file of the Angular.
+DON'T TOUCH IT.
+
+==========
+.editorconfig:
+==========
+Editor Configuration.
+
+==========
+node_modules:
+==========
+DON'T TOUCH IT.
+We never give this folder to anyone. It is created whenever we work with npm. All the module's information is already in package.json file.
+
+==========
+e2e:
+==========
+This folder is for end to end testing. Used by tester.
+
+==========
+src:
+==========
+Main folder where the entirety of the thing work. All the others are compiled and are moved into the main f
+
+==========
+src/app:
+==========
+It is not technically a folder. It is a module as it has a module file inside it (app.module.ts).
+Every app component is going to have four files associated with it without exception.
+1. app.module.ts: Module file associated with the app module.
+2. app.component.ts: This is the class file.
+3. app.component.spec.ts: It is for testing purpose.
+4. app.component.html: Template file.
+5. app.component.css: CSS file. [We have one global CSS file in the src and another CSS for this module]
